@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <!-- <link rel="stylesheet" href="css/Form-style.css"> -->
+    <style>
+    /* Css styling for form page */
+header {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(216, 174, 24);
+}
+
+body {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("https://i.ibb.co/g6VnSqL/Whats-App-Image-2024-04-25-at-7-06-29-PM.jpg");
+    color: rgb(241, 108, 13);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bolder;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: rgb(27, 27, 26);
+    text-align: center;
+    background-color: rgb(218, 217, 182);
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* fieldset {
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 400px;
+    border: 1px solid #ccc;
+} */
+
+/* legend {
+    color: #000;
+}*/
+
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+} 
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #333;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    outline: none;
+    background: #333;
+}
+
+@media (max-width: 600px) {
+    header {
+        font-size: 24px;
+    }
+}
+</style>
+
+</head>
+<body >
+
+    <form action="/order" method="post">
+        <header>Order Details</header>
+        <p><h2>Products</h2></p >
+        <p>Product Type: 
+            <select name="item" id="item">
+                <option value="">----select your item-----</option>
+                <option value="Mandala">Mandala</option>
+                <option value="God Scriptures">God Scriptures</option>
+
+            </select>
+        </p>
+
+        <p><h2>Items</h2></p>
+        <p>
+            Item type:
+            <select name="item1" id="item1">
+                <option value="">Select your Item</option>
+                <option value="Hinduism">Hinduism</option>
+                <option value="Buddhism">Buddhism</option>
+            </select>
+        </p>
+        <hr>
+    
+       <h2> Contact Details</h2>
+
+        <p> Name: *<input type="name" required></p>
+        <fieldset>
+            <legend>Gender *</legend>
+            <p>
+                Male <input type="radio" name="gender" id="male" required>
+                Female <input type="radio" name="gender" id="female" required>
+            </p>
+        </fieldset>
+       <p>
+            Address:<textarea name="address" id="address"
+        cols="20" rows="2"></textarea>
+       </p>
+       <p>Email: <input type="email" name="email" id="email" required></p>
+       <p>PinCode: <input type="number" name="pincode" id="pincode" required></p>
+       <h2>Payment-Details:</h2>
+       <p>Card Type: 
+        <select name="card_type" id="card_type">
+        <option value="">Select Card Type</option>
+        <option value="Master Card">Master Card</option>
+        <option value="SBI">SBI Card</option>
+        <option value="Credit Card">Credit Card</option>
+        <option value="Rupay">Rupay</option>
+       </p>
+    </select>
+    <p>
+        Card Number:<input type="number" id="number" name="card_number" required>
+    </p>
+    <p>Expiration Date:<input type="date" name="exp_date" id="exp_date" required></p>
+    <p>CVV Number:<input type="password" name="cvv" id="number" required></p>
+    <input type="submit" value="Pay Now">
+
+    </form>
+    
+</body>
+</html>

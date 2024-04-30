@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Radiant-Realm: Illuminate your world with Art</title>
+    <!-- <link rel="stylesheet" href="css/style1.css"> -->
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="css/phone.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <style>
+
+        /* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    /* background: url('../homeimg.jpg') no-repeat center center/cover; */
+    height: 642px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1 {
+    color: #152126;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p {
+    color: #282992;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+
+/* Services Section */
+#services {
+    margin: 34px;
+    display: flex;
+}
+
+#services .box {
+    text-align: center;
+    border: 2px solid rgb(152, 128, 128);
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 20px;
+    background: #e4b1b1;
+    margin-bottom: 20px;
+    /* ansform: scale(1.2);tr */
+    /* trion: scale(1.2);ansit */
+
+}
+
+#services .box:hover {
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+#services .box img {
+    height: 160px;
+    margin: auto;
+    display: block;
+}
+
+#services .box p {
+    font-family: 'Bree Serif', serif;
+
+}
+
+/* Clients Section */
+#client-section {
+    position: relative;
+}
+
+#client-section::before {
+    content: "";
+    position: absolute;
+    background: url('../bg.jpg');
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item {
+    padding: 34px;
+}
+
+#clients img {
+    height: 124px;
+}
+
+
+
+footer {
+    background: rgb(15, 1, 1);
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary {
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary {
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 2px solid black;
+    background-color: rgb(219, 164, 200);
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.btn a {
+    text-decoration: none;
+    /* Remove underline */
+    color: white;
+    /* Set text color */
+}
+
+.btn a:hover {
+    color: white;
+    /* Set hover text color */
+}
+
+a:hover {
+    color: bisque;
+}
+
+.center {
+    text-align: center;
+}
+
+.Brand-menu-heading {
+    font-family: 'Baloo Bhai';
+    text-align: center;
+    font-size: 3.4rem;
+    font-weight: 400;
+    color: rgb(9, 9, 9);
+}
+
+/* #Top-Brands{
+    background: url('');
+} */
+
+.Brand-menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px 30px 0px;
+}
+
+.Brand-menu-container img {
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.Brand-menu-item {
+    font-family: 'Bree Serif', serif;
+    display: flex;
+    flex: 1 1 600px;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+}
+
+.Bottom-to-Top {
+    text-align: center;
+}
+
+p .center {
+    text-align: start;
+}
+
+.Brand-img:hover {
+    transform: scale(1.2);
+    transition: 1s;
+
+}
+
+#Brand-description {
+    font: bold;
+}
+
+#search-box {
+    padding-right: 408px;
+}
+
+.email {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 0;
+    /* background-size: cover;
+    overflow: hidden;
+    position: relative;
+    background-position: center; */
+}
+
+.slide {
+    width: 100%;
+    height: 99%;
+    flex-shrink: 0;
+    display: none;
+    background-size: cover;
+    background-position: center;
+    /* position: absolute; */
+}
+
+.slide.active {
+    display: block;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* responivity */
+/* For screens smaller than 1170px */
+@media screen and (max-width: 1170px) {
+
+    /* Navigation Bar */
+    #navbar {
+        flex-direction: column;
+        /* Change flex-direction to column */
+        align-items: center;
+    }
+
+    #navbar ul {
+        display: flex;
+        flex-direction: row;
+        /* Change flex-direction to row */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    #navbar ul li {
+        margin: 0 10px;
+    }
+
+    #search-box {
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Home Section */
+    #home .content {
+        width: 80%;
+    }
+
+    /* Services Section */
+    #services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #services .box {
+        width: 80%;
+        margin: 20px 0;
+    }
+
+    /* Brands Section */
+    .Brand-menu-container img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .Brand-menu-item {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    /* Contact Section */
+    .email,
+    .phone {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+#link a{
+    opacity: 0.5;
+}
+
+#link a:hover{
+    opacity: 1;
+}
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+
+    /* Navigation Bar */
+    #logo img {
+        height: 40px;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar ul li {
+        margin-bottom: 10px;
+    }
+
+    #navbar ul li a {
+        padding: 5px 20px;
+    }
+
+    /* Home Section */
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    #home p {
+        font-size: 1.2rem;
+    }
+
+    /* About Section */
+    #About .box {
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    /* Services Section */
+    #services .box {
+        width: 90%;
+    }
+
+    /* Brands Section */
+    .Brand-menu-container img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Contact Section */
+    .email,
+    .phone {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 991.98px) {
+
+    /* .navbar-nav .nav-item {
+        text-align: center;
+    } */
+
+}
+
+
+</style>
+
+</head>
+    
+
+<body>
+    <script>
+        alert("Tap the okay button for entering to the web page ")
+    </script>
+    <!-- <nav id="navbar">
+        <div id="logo">
+            <img src="logo2.jpeg" alt="MyOnlineMeal.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#About">About</a></li>
+            <li class="item"><a href="#Services">Services</a></li>
+            <li class="items"><a href="#Top-Brands">Top-Items</a></li>
+            <li class="items"><a href="#contact">Contact-us</a></li>
+            <input type="search" id="search-box" placeholder="    search here...">
+        </ul>
+    </nav> -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top " >
+        <div class="container-fluid ">
+            <a class="navbar-brand mx-3" href="#">
+                <img src="https://i.ibb.co/m6yMKML/logo2.jpg" style="border-radius: 50%;" alt="Bootstrap" width="70px" height="70px">
+              </a>
+          <button class="navbar-toggler" style="color: black; background-color: white;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="background-color: white;"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active mx-4 " style="font-size: 20px; color: white;" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active mx-4" style="font-size: 20px; color: white;" href="#About">About</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link active mx-4" style="font-size: 20px; color: white;" href="#Services">Services</a>
+              </li>
+              
+              <li class="nav-item ">
+                <a class="nav-link active mx-4" style="font-size: 20px; color: white;" href="#Top-Brands">Top-Items</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active mx-4" style="font-size: 20px; color: white;" href="#contact">Contact-Us</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2 mt-3" style="height: 44px; width: 350px;" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit" style="height: 45px;">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+       -->
+       <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-3" href="#">
+                <img src="https://i.ibb.co/m6yMKML/logo2.jpg" style="border-radius: 50%;" alt="Bootstrap" width="70px" height="70px">
+            </a>
+            <button class="navbar-toggler" style="color: black; background-color: white;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="background-color: white;"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active mx-4" style="font-size: 20px; color: white;" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mx-4" style="font-size: 20px; color: white;" href="#About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mx-4" style="font-size: 20px; color: white;" href="#Services">Services</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link active mx-4" style="font-size: 20px; color: white;" href="#Top-Brands">Top-Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active mx-4" style="font-size: 20px; color: white;" href="#contact">Contact-Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 mt-3" style="height: 45px; width: 260px; font-size: 18px;" type="search" placeholder="Search" aria-label="Search">
+                    <div class="d-flex align-items-center ms-3">
+                        <a href="D:/1st_sem_projects/HTML Project/index1.html" class="btn btn-primary" style="height: 45px; font-size: 18px;">Search</a>
+                    </div>
+                    <!-- <button class="btn btn-outline-success" type="submit" style="height: 45px; font-size: 18px;">Search</button> -->
+                </form>
+                 <!-- <div class="d-flex align-items-center ms-3">
+                    <a href="/login" class="btn btn-primary" style="height: 45px; font-size: 18px;">Login</a>
+                    <a href="/signup" class="btn btn-success ms-2" style="height: 45px; font-size: 18px;">Signup</a>
+                </div>  -->
+            </div>
+        </div>
+    </nav>
+    
+    
+
+    <section id="home" class="slider-container">
+        <div class="slider">
+            <div class="slide active" style="background-image: url('https://i.ibb.co/ss8WMB6/homeimg.jpg');"></div>
+            <div class="slide" style="background-image: url('https://i.ibb.co/njBr58G/img8.jpg');"></div>
+            <div class="slide" style="background-image: url('https://i.ibb.co/fYBh5Ct/img6.jpg');"></div>
+            <div class="slide" style="background-image: url('https://i.ibb.co/K9885p5/img7.jpg');"></div>
+            
+            <!-- Add more slides as needed -->
+        </div>
+        <div class="content">
+            <h1 class="h-primary">Welcome to Radiant Realm</h1><br><br>
+            <p>"Unlock the door of Realm World: where every stroke tells a story and every swirl ignites the soul."</p><br>
+            <button class="btn btn-outline-success"><a href="/order" style="color: black; font-size: 20px;" >Order Now</a></button>
+        </div>
+    </section><br><br><hr>
+
+    <section id="About">
+        <h1 class="h-primary center">About</h1>
+        <div id="services">
+            <div class="box">
+                <img src="https://i.ibb.co/ZVvY9nR/img5.jpg" alt="">
+                <h2 class="h-secondary center">Our Vision</h2>
+                <p class="center"><u>"Our vision is to illuminate the world of handmade art, where every creation tells
+                        a story and evokes emotion. We aim to be a beacon of authenticity, fostering a community of
+                        artists and art lovers to celebrate craftsmanship and support each other. With a belief in the
+                        unique charm of handmade art, we aspire to create a more connected, sustainable, and beautiful
+                        world."</u></p>
+            </div>
+            <div class="box">
+                <img src="https://i.ibb.co/K6SrRKV/img3.jpg" alt="">
+                <h2 class="h-secondary center">Our items</h2>
+                <p class="center">
+                <u>"Delve into our curated collections where each piece tells a unique story, blending creativity with craftsmanship. Explore a treasure trove of handpicked creations celebrating artistry at its finest. Experience a journey of beauty and inspiration through our carefully selected range,each item reflecting our dedication to creativity and quality. Whether you're a collector or an enthusiast, discover boundless wonder in our collections.</u></p>
+            </div>
+            <div class="box">
+                <img src="https://i.ibb.co/s3LMkjz/img4.jpg" alt="">
+                <h2 class="h-secondary center">Our Designs</h2>
+                <p class="center"><u>"At Radiant Realm, we take pride in our unique designs that blend innovation with timeless elegance.Our artisans and designers imbue each masterpiece with dedication and skill, ensuring excellence in every detail. From classic to contemporary, our diverse portfolio offers styles for every taste. Whether it's fabric patterns or canvas motifs, our designs reflect our passion and attention to detail. Explore our collection to experience the magic of craftsmanship in every creation."</u></p>
+            </div>
+        </div>
+        <hr>
+    </section>
+
+    <section id="Services">
+        <h1 class="h-primary center">Our services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="https://i.ibb.co/Ch37MDf/sale1-2-Copy.jpg" alt="">
+                <h2 class="h-secondary center">Special Discount</h2>
+                <p class="center"><u>Thier is a special discount given to many special days like we give buy 2 get 1
+                        free offer every wednesday also we give 50% off on first order from our website</u></p>
+            </div>
+            <div class="box">
+                <img src="https://i.ibb.co/G5Q421D/photo.webp" alt="">
+                <h2 class="h-secondary center">Door To Door Services</h2>
+                <p class="center">
+
+                    <u> We provide door to door services so that our customer do not get any difficulty to have thier
+                        product as our customer comfortness is our first priority </u>
+                </p>
+            </div>
+            <div class="box">
+                <img src="https://i.ibb.co/SBmmKcG/img9.jpg" alt="">
+                <h2 class="h-secondary center">Fastest Delivery</h2>
+                <p class="center"><u> Our website claim to give the fastest dilevery in India because our website is
+                        have multiple outlet in all over ther country in India. Also we claim to give free dilevery if
+                        the order does not rech the destination in the given date of delivery</u></p>
+            </div>
+        </div>
+
+
+        </div>
+    </section>
+    <hr>
+    <!--jhggkgcjhlkajx;cjdkjcjdsjl;djwlkfhclkdlkclkwejslkdjkwjdddjqksdl;jlkjo;jfojesjcsc;jel;dcj-->
+
+    <section id="Top-Brands">
+        <h2 class="Brand-menu-heading">Top Items</h2>
+        
+        <!-- yha se likhna hai-->
+
+        <div class="Brand-menu-container container">
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/Mf8cQpp/item1.jpg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 1</h2> -->
+                    <!-- <p>
+                        <b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus deleniti corporis qui.
+                    </p> -->  
+                </div>
+            </div>
+
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/tcLktMv/item2.jpg" alt="error" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 2</h2> -->
+                    <!-- <p>
+                        <b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, ipsam. Cupiditate, vel.</b>
+                    </p> -->
+                </div>
+            </div>
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/PFqgdvG/item3.jpeg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 3</h2> -->
+                    <!-- <p>
+                        <b> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam quaerat dignissimos at?
+                        </b>
+                    </p> -->
+                    
+                </div>
+            </div>
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/Jsm66xx/item4.jpg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 4</h2> -->
+                </div>
+            </div>
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/m82yCVh/item5.jpg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile"><b>Image 5</b></h2> -->
+                </div>
+            </div>
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/hsgTw9Y/item6.jpg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 6</h2> -->
+                </div>
+            </div>
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/JxfpxF9/item7.jpg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 7</h2> -->
+                    
+                </div>
+            </div>
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/jwL1JGV/item8.jpg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 8</h2> -->
+                </div>
+            </div>
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/bdH447L/item9.jpg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 9</h2> -->
+                </div>
+            </div>
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/8g1Mzwr/item20.jpg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 10</h2> -->
+                </div>
+            </div>
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/CJrNXLs/item11.jpg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 11</h2> -->
+                </div>
+            </div>
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/j88rxTr/item10.jpg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 12</h2> -->
+                </div>
+            </div>
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/WvLVrGN/item13.jpg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 13</h2> -->
+                </div>
+            </div>
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/vPPCgdH/item14.jpg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 14</h2> -->
+                </div>
+            </div>
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/pQLYJBg/item15.jpg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 15</h2> -->
+                </div>
+            </div>
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/mGR7fkD/item16.jpg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 16</h2> -->
+                </div>
+            </div>
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/dKxpVfx/item23.jpg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 17</h2> -->
+                </div>
+            </div>
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/d5vCJRM/item18.jpg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 18</h2> -->
+                </div>
+            </div>
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/TP6Gs66/item19.jpg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 19</h2> -->
+                </div>
+            </div>
+            <div class="Brand-menu-item">
+                <div class="Brand-img">
+                    <img src="https://i.ibb.co/6HHjzBS/item22.jpg" alt="" /><br>
+                    <p class="Brand-price" style="font-size: 27px;">Price: ₹ 1k</p>
+                </div>
+                <div class="Brand-description">
+                    <!-- <h2 class="Brand-titile">Image 20</h2> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <section class="email">
+            <div>
+                <h4>Emails:</h4>
+                <p>
+                    onlineartgallary@gmail.com.
+                </p>
+                <p>
+                    shoppingbyartgallary@gmail.com.
+                </p>
+                <p>
+                    artgallary@gmail.com
+                </p>
+                <p>
+                    mandalaartgallary@gmail.com.
+                </p>
+            </div><br><br><br>
+            <div class="phone">
+                <h4> Customer care:</h4>
+                <p>
+                    +91 98973XXXXX
+                </p>
+                <p>
+                    +91 96673XXXXX
+                </p>
+                <p>
+                    +91 99974XXXXX
+                </p>
+                <p>
+                    +91 93798XXXXX
+                </p>
+            </div>
+            
+        </section>
+        
+    </section>
+    <!-- <button class="btn btn-outline-success"><a href="/order" style="color: black; display: flex;
+    justify-content: center; font-size: 20px;" >Order Now</a></button> -->
+
+    <section id="link">
+        <a href="#home" style="text-decoration: none; color: black; ">
+            <h3 class="Bottom-to-Top">Click here to go Top
+            </h3>
+    </a>
+    </section>
+
+
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.radiant-realm.com.  All rights reserved!
+        </div>
+    </footer>
+
+
+    <script>
+        let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const nextSlide = () => {
+    slides[slideIndex].classList.remove('active');
+    slideIndex = (slideIndex + 1) % slides.length;
+    slides[slideIndex].classList.add('active');
+}
+
+setInterval(nextSlide, 3000); 
+
+
+
+</script>
+
+</body>
+
+</html>
